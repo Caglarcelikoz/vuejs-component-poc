@@ -20,3 +20,5 @@ function calculate() {
  //   console.log(numbers);
     return numbers;
 }
+
+window.calculate = calculate;
