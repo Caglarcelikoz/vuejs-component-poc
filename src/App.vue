@@ -35,13 +35,6 @@ export default {
     sum() {
       this.c = retrieveCalculationFromIndex(this.a, this.b);
     },
-    passData() {
-      const numbers = [];
-      numbers.push(this.a);
-      numbers.push(this.b);
-      console.log(numbers);
-      return numbers;
-    },
     validateResult(value) {
       if (value < 3) {
         this.msg['result'] = 'result must be greater than 3';
