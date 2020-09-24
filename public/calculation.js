@@ -14,11 +14,7 @@ function calculate() {
        elemResult.value = num1 + num2;
 
     }
-    var numbers = new Array();
-    numbers['num1']=num1;
-    numbers['num2']=num2;
- //   console.log(numbers);
-    return numbers;
+  
 }
 
 window.calculate = calculate;
