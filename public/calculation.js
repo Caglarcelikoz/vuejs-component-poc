@@ -6,18 +6,18 @@ function calculate(numberA,numberB) {
    var num2 = Number(document.getElementById("num2").value);
    
     var elemResultText = document.getElementById("resultText");
-    var elemResult= document.getElementById("result");
+    var calculationResult= document.getElementById("result");
 
     if (elemResultText.textContent === undefined) {
-      elemResult.value = Number(num1)+ Number(num2);
-       elemResultText.textContent = "result is " + elemResult.value + ".";
+      calculationResult.value = Number(num1)+ Number(num2);
+      elemResultText.textContent = "result is " + calculationResult.value + ".";
     }
     else { // IE
-      elemResult.value = Number(num1)+ Number(num2);
-      elemResultText.textContent = "result is " + elemResult.value + ".";
+      calculationResult.value = Number(num1)+ Number(num2);
+      elemResultText.textContent = "result is " + calculationResult.value + ".";
 
     }
-  return elemResult.value;
+  return calculationResult.value;
 }
 
 window.calculate = calculate;

@@ -7,16 +7,25 @@
     <span v-if="msg.result">{{ msg.result }}</span>
 
     <h2>{{ a }} + {{ b }} = {{ c }}</h2>
+    <button class="vl-button">
+      <span class="vl-button__label">Gegevens opslaan</span>
+    </button>
+    <button class="vl-button vl-button--disabled" disabled>
+      <span class="vl-button__label">Gegevens opslaan</span>
+    </button>
+    <button class="vl-button vl-button--error">
+      <span class="vl-button__label">Gegevens opslaan</span>
+    </button>
   </div>
 </template>
 
 <script>
-import Editor from './components/Editor.vue';
-import { calculate } from '../public/calculation';
-import { retrieveCalculationFromIndex } from './IndexConnector';
+import Editor from "./components/Editor.vue";
+import { calculate } from "../public/calculation";
+import { retrieveCalculationFromIndex } from "./IndexConnector";
 
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       a: 0,
@@ -37,9 +46,9 @@ export default {
     },
     validateResult(value) {
       if (value < 3) {
-        this.msg['result'] = 'result must be greater than 3';
+        this.msg["result"] = "result must be greater than 3";
       } else {
-        this.msg['result'] = '';
+        this.msg["result"] = "";
       }
     },
   },
@@ -49,13 +58,7 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import "~@govflanders/vl-ui-core/src/scss/core";
+@import "~@govflanders/vl-ui-button/src/scss/button";
 </style>
